@@ -1,0 +1,44 @@
+api:
+    db:
+        keys: {}
+        
+        stats:
+            counter: 0
+
+        settings:
+            twilio_sid: ""
+            twilio_token: ""
+            twilio_from: ""
+            fault_format: "[%node%] FAULT: %device% %event%"
+            exception_format: "[%node%] EXCEPT: %exception%"
+            start_format: "[%node%] START"
+            stop_format: "[%node%] STOP"
+            error_format: "[%node%] ERROR: %type%: %message%"
+            pause_format: "[%node%] PAUSE: %node% %reason%"
+            unpause_format: "[%node%] UNPAUSE: %node% %reason%"
+
+        phones: {}
+
+        devices: {}
+
+        nodes: {}
+
+    devices:
+        dht22_sensor:
+            config:
+                data_pin: 0
+
+            data:
+                temperature: [0, 0.1]
+                humidity: [0, 0.1]
+                valid: [false]
+
+        flood_sensor:
+            config:
+                pud_pin: 0
+
+            data:
+                state: [false]
+        
+
+gpio: {}
